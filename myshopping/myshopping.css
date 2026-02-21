@@ -1,0 +1,232 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f0f1a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ✨ Animated Gradient Background */
+.background-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    z-index: -2;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ✨ Glitter Overlay */
+body::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 3px 3px;
+    opacity: 0.05;
+    animation: glitter 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes glitter {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-50px); }
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff00cc, #00f2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff00cc;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    padding: 14px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(255,0,200,0.6);
+}
+
+.explore-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Products Section */
+.products-section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Product Card */
+.product-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.4s;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 40px rgba(255,0,200,0.5);
+}
+
+.image-wrapper {
+    margin-bottom: 15px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Price */
+.price-section {
+    margin: 10px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    opacity: 0.6;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00f2ff;
+}
+
+/* Stock */
+.stock {
+    margin: 8px 0;
+}
+
+.limited {
+    color: red;
+    font-weight: bold;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* 💎 BIG LUXURY BUY BUTTON */
+.buy-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 18px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    color: white;
+    text-decoration: none;
+    transition: 0.4s ease;
+    box-shadow: 0 0 25px rgba(255,0,200,0.7);
+}
+
+.buy-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 45px rgba(255,0,200,1);
+}
+
+/* Contact */
+.contact-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+.email {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #00f2ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(0,0,0,0.5);
+}
+
+.disclaimer {
+    opacity: 0.7;
+    margin-top: 10px;
+}
